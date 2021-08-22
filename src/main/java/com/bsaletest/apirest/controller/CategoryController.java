@@ -3,10 +3,7 @@ package com.bsaletest.apirest.controller;
 import com.bsaletest.apirest.model.MCategory;
 import com.bsaletest.apirest.service.CategoryService;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -17,6 +14,7 @@ public class CategoryController {
     CategoryService service;
 
     @CrossOrigin(origins="*",methods = {RequestMethod.GET})
+    @GetMapping("/categories")
     public List<MCategory> listarCategorias(){
         return service.obtener();
     }
