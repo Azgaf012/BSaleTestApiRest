@@ -13,10 +13,11 @@ import java.util.List;
 @Service("serviceCategory")
 public class CategoryService {
 
-
+    @Autowired
     @Qualifier("repositoryCategory")
     private CategoryRepository repository;
 
+    @Autowired
     @Qualifier("converter")
     private Convertidor converter;
 
