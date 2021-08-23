@@ -13,14 +13,18 @@ La API Rest tiene los siguientes endpoints:
 
 
 **``GET/v1/categories``**
+
 **Descripción**:lista todas las categorias.
+
 **Parametros**:no cuenta con parametros.
+
 
 **``GET/v1/productsPage``**
 
 **Descripción**: lista todos los productos paginados.
 
 **Parametros**:no cuenta con parametros.
+
 
 **``GET/v1/productsNamePage``**
 
