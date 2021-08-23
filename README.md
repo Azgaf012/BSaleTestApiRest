@@ -17,11 +17,15 @@ La API Rest tiene los siguientes endpoints:
 **Parametros**:no cuenta con parametros.
 
 **``GET/v1/productsPage``**
+
 **Descripción**: lista todos los productos paginados.
+
 **Parametros**:no cuenta con parametros.
 
 **``GET/v1/productsNamePage``**
+
 **Descripción**: lista todos los productos filtrador por nombre paginados.
+
 **Parametros**:
 * `'name=String'`: Texto que debe incluir el nombre del producto.
 * `'page=int'`: El número de página a devolver, si no se indica el valor por defecto es 0.
@@ -29,7 +33,9 @@ La API Rest tiene los siguientes endpoints:
 
 
 **``GET/v1/productsCategoryPage``**: 
+
 **Descripción**: lista todos los productos de una categoria paginados.
+
 **Parametros**:
 * `'category=int'`: Id de la categoria de los productos a listar.
 * `'page=int'`: El número de página a devolver, si no se indica el valor por defecto es 0.
