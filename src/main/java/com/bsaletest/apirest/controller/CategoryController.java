@@ -8,6 +8,11 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+/**
+ *Esta clase especifica los diferentes endpoint de categoría que se pueden consumir.
+ * @see CategoryController
+ * @author AndZuñ
+ */
 @RestController
 @RequestMapping("/v1")
 public class CategoryController {
@@ -16,9 +21,13 @@ public class CategoryController {
     @Qualifier("serviceCategory")
     CategoryService service;
 
+    /**
+     * Este método se ejecuta al llamar al endpoint "/categories", devuelve una lista de MCategory
+     * @return lista de MCategory
+     */
     @CrossOrigin(origins = "*",methods ={RequestMethod.GET})
     @GetMapping("/categories")
     public List<MCategory> obtenerCategorias(){
-        return service.obtener();
+        return service.listarCategories();
     }
 }

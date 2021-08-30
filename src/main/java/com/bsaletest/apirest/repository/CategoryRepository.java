@@ -7,7 +7,17 @@ import org.springframework.stereotype.Repository;
 import java.io.Serializable;
 import java.util.List;
 
+
+/**
+ * Esta clase se encarga de realizar la peticiones a la base de datos de la entidad Category
+ * @see CategoryRepository
+ */
 @Repository("repositoryCategory")
 public interface CategoryRepository extends JpaRepository<Category, Serializable> {
-    public abstract List<Category> findAll();
+
+    /**
+     * Este método se utiliza para listar todas los categorias ordenas por nombre.
+     * @return lista de categorias.
+     */
+    public abstract List<Category> findAllOrOrderByName();
 }
