@@ -18,6 +18,39 @@ La API Rest tiene los siguientes endpoints:
 
 **Parametros**:no cuenta con parametros.
 
+```json
+[
+  {
+    "id": 4,
+    "name": "bebida"
+  },
+  {
+    "id": 1,
+    "name": "bebida energetica"
+  },
+  {
+    "id": 6,
+    "name": "cerveza"
+  },
+  {
+    "id": 2,
+    "name": "pisco"
+  },
+  {
+    "id": 3,
+    "name": "ron"
+  },
+  {
+    "id": 5,
+    "name": "snack"
+  },
+  {
+    "id": 7,
+    "name": "vodka"
+  }
+]
+```
+
 
 **``GET/v1/productsPage``**
 
