@@ -32,7 +32,7 @@ public interface ProductRepository extends JpaRepository<Product, Serializable> 
      * @param name texto que debe contener el nombre del producto.
      * @return lista de producctos.
      */
-    @Query("select p from Product p where p.name = :name")
+    @Query("select p from Product p where p.name like %:name%")
     public abstract  List<Product> findProductByNameContainingOrderByName(@Param("name") String name);
 
     /**
