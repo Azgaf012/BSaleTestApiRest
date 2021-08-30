@@ -16,8 +16,8 @@ import java.util.List;
 public interface CategoryRepository extends JpaRepository<Category, Serializable> {
 
     /**
-     * Este método se utiliza para listar todas los categorias ordenas por nombre.
-     * @return lista de categorias.
+     * Este método se utiliza para listar todas las categorías.
+     * @return lista de categorías.
      */
-    public abstract List<Category> findAllOrOrderByName();
+    public abstract List<Category> findAll();
 }

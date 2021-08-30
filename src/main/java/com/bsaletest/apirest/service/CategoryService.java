@@ -5,6 +5,7 @@ import com.bsaletest.apirest.model.MCategory;
 import com.bsaletest.apirest.repository.CategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -26,12 +27,11 @@ public class CategoryService {
     private Convertidor converter;
 
     /**
-     * Este método invoca al método findAllOrOrderByName del repository,
-     * luego convierte el resultado en una lista de MCategory con método convertirListaCategories del converter.
+     * Este método invoca al método findAll del repository, la ordena por nombre y luego convierte el resultado en una lista de MCategory con método convertirListaCategories del converter.
      * @return lista de MCategory
      */
     public List<MCategory> listarCategories(){
-        return converter.convertirListaCategories(repository.findAllOrOrderByName());
+        return converter.convertirListaCategories(repository.findAll(Sort.by(Sort.Direction.ASC,"name")));
     }
 
 }
